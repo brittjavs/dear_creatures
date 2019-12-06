@@ -1,11 +1,11 @@
 <h1>Welcome Back</h1>
 
-<%=form_for @user, url: '/signin' do |f|%>
+<%=form_for @user do |f|%>
 <%=f.label :username%>
 <%=f.text_field :username%>
 <br>
 <%=f.label :password%>
 <%=f.password_field :password%>
 <br>
-<%link_to "Log In", login_path%>
+<%f.submit "Log In"%>
 <%end%>
