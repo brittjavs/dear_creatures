@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :donations
   resources :shelters
   root "static#home"
   get '/login', to: "sessions#new"
