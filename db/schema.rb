@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_07_055720) do
+ActiveRecord::Schema.define(version: 2019_12_07_061641) do
 
   create_table "donations", force: :cascade do |t|
     t.integer "shelter_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 2019_12_07_055720) do
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "needed_items", force: :cascade do |t|
+    t.integer "shelter_id"
+    t.integer "item_id"
+    t.integer "quantity"
   end
 
   create_table "shelters", force: :cascade do |t|
