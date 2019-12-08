@@ -1,8 +1,9 @@
 <h2>Hello, <%=@user.username%></h2>
-#if user has past donations show total of items donated
+
+<%# #if user has past donations show total of items donated
 # To date you have donated: 
 #name and quiantity of item a user has donated
-#number of shelters they have donated to
+#number of shelters they have donated to %>
 
 <%=link_to "Browse Shelters", shelter_path%>
 <%=link_to "Make a Donation", new_donation_path%>
