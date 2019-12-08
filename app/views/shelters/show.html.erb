@@ -1,8 +1,8 @@
-#name, location, description and list of items and quantities needed with link to make a donation at the bottom
-<%=@shelter.name%>
+<%# #name, location, description and list of items and quantities needed with link to make a donation at the bottom %>
+<h2><%=@shelter.name%></h2>
 <%=@shelter.location%>
 
-Items Needed:
+<h3>Items Needed:</h3>
 
 
 <%=link_to "Make a Donation", new_donation_path%>

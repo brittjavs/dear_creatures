@@ -1,10 +1,14 @@
-#list each shelter name, location, description with link to show page with names being links to needed items list for that shelter
+<%# list each shelter name, location, description with link to show page with names being links to needed items list for that shelter %>
 
 <h1>Animal Shelters, Rescues, and Sanctuaries</h1>
-
+<ul>
 <%@shelters.each do |shelter|%>
-<%=link_to shelter.name, shelter_path(shelter)%>
+<li><%=link_to shelter.name, shelter_path(shelter)%>
+<br>
 <%=shelter.location%>
+<br>
 <%=shelter.description%>
+</li>
+<%end%>
 
 

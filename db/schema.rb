@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_12_07_061641) do
   create_table "shelters", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.integer "description"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
