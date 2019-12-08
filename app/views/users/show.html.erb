@@ -4,7 +4,8 @@
 # To date you have donated: 
 #name and quiantity of item a user has donated
 #number of shelters they have donated to %>
-
+<%if @user.donations%>
+<%=link_to "View all your past donations", user_donations_path%>
 <%=link_to "Browse Shelters", shelters_path%>
 <%=link_to "Make a Donation", new_donation_path%>
 <%=link_to "Log Out", logout_path%>
