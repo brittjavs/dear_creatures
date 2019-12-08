@@ -8,6 +8,10 @@ class DonationsController < ApplicationController
             
     end
 
+    def index
+        @donations = User.find(params[:user_id].donations)
+    end
+
     private
     def donation_params
         params.require(:donation).permit(:shelter_id, :user_id, :item_id, :quantity)
