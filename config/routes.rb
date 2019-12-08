@@ -4,13 +4,12 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   get '/logout', to: 'sessions#destroy'
   get '/signup', to: "users#new"
-  resources :users
-  resources :donations
   resources :shelters
-  resources :users, only: [:show] do
-    resources :donations, only: [:index]
+  resources :users do
+    resources :donations, shallow: true
   end
 
+  resources :donations
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
