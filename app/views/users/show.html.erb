@@ -5,7 +5,7 @@
 #name and quiantity of item a user has donated
 #number of shelters they have donated to %>
 
-<%=link_to "View your past donations", user_donations_path(@user.id)%>
+<%=link_to "View your past donations", user_donations_path(@user)%>
 <%=link_to "Browse Shelters", shelters_path%>
-<%=link_to "Make a Donation", new_user_donation_path(@user.id)%>
+<%=link_to "Make a Donation", new_user_donation_path(@user)%>
 <%=link_to "Log Out", logout_path%>

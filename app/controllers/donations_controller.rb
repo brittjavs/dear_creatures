@@ -4,12 +4,13 @@ class DonationsController < ApplicationController
     end
 
     def create
-
-            
+        @donation.new(donation_params)
     end
 
     def index
+        # binding.pry
         @donations = User.find(params[:user_id].donations)
+        
     end
 
     private
