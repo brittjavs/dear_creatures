@@ -8,7 +8,7 @@ class DonationsController < ApplicationController
 
     def index
         # binding.pry
-        @donations = User.find(params[:user_id].donations)
+        # @donations = User.find(params[:user_id].donations)
         
     end
 
