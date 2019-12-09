@@ -4,7 +4,6 @@ class DonationsController < ApplicationController
     end
 
     def create
-        @donation.new(donation_params)
     end
 
     def index
