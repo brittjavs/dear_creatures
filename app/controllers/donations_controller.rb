@@ -4,11 +4,17 @@ class DonationsController < ApplicationController
     end
 
     def create
+        @donation = current_user.donations.create(donation_params) 
+        if @donation
+            redirect_to shelter_path(@shelter)
+        else
+            render :new
+        end
     end
 
     def index
         # binding.pry
-        # @donations = User.find(params[:user_id].donations)
+        @donations = current_user.donations
         
     end
 

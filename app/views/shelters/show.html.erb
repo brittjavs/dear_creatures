@@ -1,12 +1,23 @@
 <%# #name, location, description and list of items and quantities needed with link to make a donation at the bottom %>
-<h2><%=@shelter.name%></h2>
-<%=@shelter.location%>
+<h1><%=@shelter.name%></h1>
+Located in <%=@shelter.location%>
+<p>If you are not able to volunteer in person, please consider donating an item from the Wish List. Thank you!</p>
+<h2>WISH LIST</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th> Item</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+         <%@shelter.needed_items.each do |needed_item|%>
+            <td><%=needed_item.quantity%></td>
+            <td><%=needed_item.item.name%></td>
+        </tr>
+         <%end%>
+    </tbody>
+</table>
 
-<h3>Items Needed:</h3>
-<ul>
-<%@shelter.items.each do |item|%>
-    <li><%=item.name%></li>
-<%end%>
-
-
-<%# <%=link_to "Make a Donation", new_user_donation_path(current_user)%> %>
+<%=link_to "Make a donation", new_user_donation_path(current_user) %>
