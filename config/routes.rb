@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :shelters, only: [:index, :show]
   
-  resources :users, only: [:show] do
+  resources :users, only: [:create, :show] do
     resources :donations, only: [:index, :new, :create]
   end
 

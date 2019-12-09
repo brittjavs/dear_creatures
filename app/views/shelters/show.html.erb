@@ -3,6 +3,10 @@
 <%=@shelter.location%>
 
 <h3>Items Needed:</h3>
+<%@shelter.needed_items.each do |needed_item|%>
+<%binding.pry%>
+    <%=needed_item.item.name%>
+<%end%>
 
 
 <%# <%=link_to "Make a Donation", new_donation_path%>
