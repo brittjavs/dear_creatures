@@ -5,8 +5,12 @@
 #redirect to shelter show page with updated quantities and thank you message %>
 
 <%=form_for @donation do |f|%>
-<%=f.label :shelter_id, "Select the shelter you would like to donate to"%>
-<%=f.collection_select :shelter_id, Shelter.all, :id, :name%>
-<%=f.collection_checkboxes :item_id, Item.all, :id, :name%>
-<%=f.submit%>
+
+<%=f.label :shelter_id, "Select the shelter you would like to donate to"%><br>
+<%=f.collection_select :shelter_id, Shelter.all, :id, :name%><br>
+<%=f.collection_select :item_id, Item.all, :id, :name%><br>
+<%=f.label :quantity%>
+<%=f.text_field :quantity%>
+<br>
+<%=f.submit "Submit Donation"%>
 <%end%>
