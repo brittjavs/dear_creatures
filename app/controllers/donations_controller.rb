@@ -4,14 +4,14 @@ class DonationsController < ApplicationController
     end
 
     def create
-        # binding.pry
-        #  @donation = current_user.donation.create(donation_params) 
-        #     binding.pry
-        # if @donation
-        #     redirect_to user_donations_path
-        # else
-        #     render :new
-        # end
+         binding.pry
+          @donation = current_user.donation.create(donation_params) 
+            #  binding.pry
+        if @donation
+             redirect_to user_donations_path
+         else
+             render :new
+         end
     end
 
     def index
