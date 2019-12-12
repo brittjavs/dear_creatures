@@ -4,6 +4,7 @@ class SheltersController < ApplicationController
     end
 
     def show
+        @user = current_user
         @shelter = Shelter.find(params[:id])
     end
     

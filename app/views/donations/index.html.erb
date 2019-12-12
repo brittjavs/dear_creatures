@@ -1,1 +1,7 @@
-<h2>Past Donation</h2>
+<h2><%=@user.username.capitalize%>'s Past Donations</h2>
+
+<%@donations.each do |donation|%>
+Date of Donation: <%=donation.created_at.strftime("%^b %d %Y")%><br>
+Item: <%=donation.item.name%><br>
+Qty: <%=donation.quantity%><br>
+<%end%>
