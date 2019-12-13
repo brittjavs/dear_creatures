@@ -3,5 +3,5 @@ class Donation < ApplicationRecord
     belongs_to :shelter
     belongs_to :item
 
-    validates :user_id, :quantity, :item_id, presence: true
+    validates :user_id, :item_id, presence: true
 end

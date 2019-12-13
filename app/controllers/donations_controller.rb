@@ -9,6 +9,8 @@ class DonationsController < ApplicationController
         
         @donation = current_user.donations.create(donation_params)
          if @donation
+            # binding.pry
+            NeededItem.update_quantity(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:quantity])
              redirect_to shelter_path(@donation.shelter)
           else
               render :new
