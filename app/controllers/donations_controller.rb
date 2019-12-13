@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
         
         @donation = current_user.donations.create(donation_params)
          if @donation
-             redirect_to user_donations_path(current_user)
+             redirect_to shelter_path(@donation.shelter)
           else
               render :new
           end
