@@ -1,4 +1,6 @@
 class DonationsController < ApplicationController
+    before_action :require_login
+    
     def new
         @donation = Donation.new
     end

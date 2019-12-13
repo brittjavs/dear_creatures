@@ -20,4 +20,4 @@ Located in <%=@shelter.location%>
     </tbody>
 </table>
 
-<%=link_to "Make a donation", new_user_donation_path(@user)%>
+<%=link_to "Make a donation", new_user_donation_path(current_user)%>
