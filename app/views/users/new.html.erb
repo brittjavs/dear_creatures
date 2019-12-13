@@ -1,6 +1,10 @@
 <h1>Create an Account</h1>
-
+<ul>
 <%=form_for @user do |f|%>
+<%@user.errors.full_messages.each do |error_message| %>
+<li><%=error_message%></li>
+<%end%>
+</ul>
 <%=f.label :email%>
 <%=f.email_field :email%>
 <br>
