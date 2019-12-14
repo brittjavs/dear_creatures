@@ -1,6 +1,5 @@
 <h1>Donation Form</h1>
 
-
 <%=form_for @donation do |f|%>
 
 <%=f.label :shelter_id, "Select the shelter you would like to donate to"%><br>
@@ -9,6 +8,8 @@
 <%=f.collection_select :item_id, Item.all, :id, :name%>
 <%=f.label :quantity%>
 <%=f.number_field :quantity, min: 1%>
+<%=f.label :dollar_amount%>
+<%=f.number_field :dollar_amount, step: 0.25, min: 1%>
 <br>
 <%=f.submit "Submit Donation"%>
 <%end%>

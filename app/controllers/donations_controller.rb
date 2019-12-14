@@ -9,8 +9,12 @@ class DonationsController < ApplicationController
         
         @donation = current_user.donations.create(donation_params)
          if @donation
-            # binding.pry
+            if params[:quantity]
             NeededItem.update_quantity(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:quantity])
+            else
+            NeededItem.update_funds(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:dollar_amount])
+            end
+
              redirect_to shelter_path(@donation.shelter)
           else
               render :new
@@ -24,6 +28,6 @@ class DonationsController < ApplicationController
 
     private
     def donation_params
-        params.require(:donation).permit(:shelter_id, :user_id, :item_id, :quantity)
+        params.require(:donation).permit(:shelter_id, :user_id, :item_id, :quantity, :dollar_amount)
     end
 end

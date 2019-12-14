@@ -2,6 +2,11 @@
 
 <%@donations.each do |donation|%>
 Date of Donation: <%=donation.created_at.strftime("%^b %d %Y")%><br>
+Donated to: <%=donation.shelter.name%>
 Item: <%=donation.item.name%><br>
+<%if donation.quantity != nil%>
 Qty: <%=donation.quantity%><br>
+<%else%>
+Dollar Amount: <%=donation.dollar_amount%>
+<%end%>
 <%end%>
