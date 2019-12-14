@@ -8,7 +8,7 @@
 <%=f.label :item_id, "Select the item you would like to donate"%>
 <%=f.collection_select :item_id, Item.all, :id, :name%>
 <%=f.label :quantity%>
-<%=f.number_field :quantity%>
+<%=f.number_field :quantity, min: 1%>
 <br>
 <%=f.submit "Submit Donation"%>
 <%end%>

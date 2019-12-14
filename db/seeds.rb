@@ -1,0 +1,57 @@
+Item.create(name: 'Feeding Bowl')
+Item.create(name: 'Bag of Food')
+Item.create(name: 'Pet Carrier')
+Item.create(name: 'Towels')
+Item.create(name: 'First Aid Kit')
+Item.create(name: 'Toys')
+Item.create(name: 'Blankets')
+
+Shelter.create(name: "North Central Animal Shelter", location: "Los Angeles, CA 90031", description: "Operated by LA Animal Services - They provide shelter to lost cats and dogs until they are reunited with their owners and help stray pets find create homes.") 
+
+Shelter.create(name: "Pasadena Humane Society", location: "Pasadena, CA 91105", description: "Donor-supported, non-profit organization that provides care and services for animals, including dogs, cats, and rabbits, until they can find loving homes.")
+
+Shelter.create(name: "FarmSanctuary", location: "Acton, CA 93510", description: "The country’s largest farm animal rescue and adoption network. The Southern California location shelters over 100 animals including cows, goats, pigs, and chickens.")
+
+Shelter.create(name: "Pacific Marine Mammal Center", location: "Laguna Beach, CA 92651", description: "Non-profit organization dedicated to rescue, rehabilitation, and release of marine animals along the coastline that are ill or injured.")
+
+Shelter.create(name: "Wolf Mountain Sanctuary", location: "Lucerne Valley, CA 92356", description: "This sanctuary offers a permanent home for wolves rescued from private owners and breeders.")
+
+NeededItem.create(shelter_id: 1, item_id: 1, quantity: 50)
+NeededItem.create(shelter_id: 1, item_id: 2, quantity: 100)
+NeededItem.create(shelter_id: 1, item_id: 3, quantity: 25)
+NeededItem.create(shelter_id: 1, item_id: 4, quantity: 25)
+NeededItem.create(shelter_id: 1, item_id: 5, quantity: 10)
+NeededItem.create(shelter_id: 1, item_id: 6, quantity: 50)
+NeededItem.create(shelter_id: 1, item_id: 7, quantity: 30)
+
+NeededItem.create(shelter_id: 2, item_id: 1, quantity: 30)
+NeededItem.create(shelter_id: 2, item_id: 2, quantity: 50)
+NeededItem.create(shelter_id: 2, item_id: 3, quantity: 12)
+NeededItem.create(shelter_id: 2, item_id: 4, quantity: 15)
+NeededItem.create(shelter_id: 2, item_id: 5, quantity: 5)
+NeededItem.create(shelter_id: 2, item_id: 6, quantity: 25)
+NeededItem.create(shelter_id: 2, item_id: 7, quantity: 20)
+
+NeededItem.create(shelter_id: 3, item_id: 1, quantity: 50)
+NeededItem.create(shelter_id: 3, item_id: 2, quantity: 80)
+NeededItem.create(shelter_id: 3, item_id: 3, quantity: 10)
+NeededItem.create(shelter_id: 3, item_id: 4, quantity: 40)
+NeededItem.create(shelter_id: 3, item_id: 5, quantity: 20)
+NeededItem.create(shelter_id: 3, item_id: 6, quantity: 20)
+NeededItem.create(shelter_id: 3, item_id: 7, quantity: 10)
+
+NeededItem.create(shelter_id: 4, item_id: 1, quantity: 20)
+NeededItem.create(shelter_id: 4, item_id: 2, quantity: 20)
+NeededItem.create(shelter_id: 4, item_id: 3, quantity: 5)
+NeededItem.create(shelter_id: 4, item_id: 4, quantity: 100)
+NeededItem.create(shelter_id: 4, item_id: 5, quantity: 15)
+NeededItem.create(shelter_id: 4, item_id: 6, quantity: 30)
+NeededItem.create(shelter_id: 4, item_id: 7, quantity: 5)
+
+NeededItem.create(shelter_id: 5, item_id: 1, quantity: 30)
+NeededItem.create(shelter_id: 5, item_id: 2, quantity: 75)
+NeededItem.create(shelter_id: 5, item_id: 3, quantity: 10)
+NeededItem.create(shelter_id: 5, item_id: 4, quantity: 20)
+NeededItem.create(shelter_id: 5, item_id: 5, quantity: 10)
+NeededItem.create(shelter_id: 5, item_id: 6, quantity: 20)
+NeededItem.create(shelter_id: 5, item_id: 7, quantity: 30)
