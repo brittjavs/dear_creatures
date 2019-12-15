@@ -10,3 +10,10 @@ run ```rails db:migrate RAILS_ENV=development``` then ```rails db:seed```
 To view in browser
 
 run ```rails s``` and ```ctrl + c``` to end the session
+
+To log in with google:
+Create a .env file in the root directory of this repository and add 
+```GOOGLE_CLIENT_ID=Your client id```
+```GOOGLE_CLIENT_SECRET=Your client secret```
+
+You will add in your unique client ID and client secret from google.
