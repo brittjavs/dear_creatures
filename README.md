@@ -3,7 +3,7 @@ This web application was created as my Rails Project for Flatiron School. It is 
 
 To run this application:
 
-run ```git clone git@github.com:brittjavs/dear_creatures.git```
+run ```git clone git@github.com:brittjavs/dear_creatures.git``` then ```cd dear_creatures```
 run ```bundle install```
 run ```rails db:migrate RAILS_ENV=development```
 
