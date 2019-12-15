@@ -1,12 +1,14 @@
 <h1>Donation Form</h1>
 
 <%=form_for @donation do |f|%>
-<%=f.label :shelter_id, "Select the shelter you would like to donate to"%><br>
+<%=f.label :shelter_id, "Select a Shelter/Rescue to Donate to"%><br>
 <%=f.collection_select :shelter_id, Shelter.all, :id, :name, :include_blank => true%><br>
-<%=f.label :item_id, "Select the item you would like to donate"%>
-<%=f.collection_select :item_id, Item.all, :id, :name, :include_blank => true%>
+<%=f.label :item_id, "Select the item you would like to donate or select 'Funding' from the dropdown"%><br>
+<%=f.collection_select :item_id, Item.all, :id, :name, :include_blank => true%><br>
+If you are donating an item, please enter a quantity.<br>
 <%=f.label :quantity%>
-<%=f.number_field :quantity, min: 1%>
+<%=f.number_field :quantity, min: 1%><br>
+If donating funds, please enter a dollar amount.<br>
 <%=f.label :dollar_amount%>
 <%=f.number_field :dollar_amount, step: "any", min: 1%>
 <br>
