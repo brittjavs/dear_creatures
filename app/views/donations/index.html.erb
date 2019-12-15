@@ -3,7 +3,7 @@
 <h3>Monetary Donations</h3>
 <%@money_donations.each do |donation|%>
 Date of Donation: <%=donation.created_at.strftime("%^b %d %Y")%><br>
-Donated to: <%=donation.shelter.name%>
+Donated to: <%=donation.shelter.name%><br>
 Item: <%=donation.item.name%><br>
 Dollar Amount: $<%=donation.dollar_amount%><br>
 <%end%>
@@ -11,7 +11,7 @@ Dollar Amount: $<%=donation.dollar_amount%><br>
 <h3>Item Donations</h3>
 <%@item_donations.each do |donation|%>
 Date of Donation: <%=donation.created_at.strftime("%^b %d %Y")%><br>
-Donated to: <%=donation.shelter.name%>
+Donated to: <%=donation.shelter.name%><br>
 Item: <%=donation.item.name%><br>
 Quantity: <%=donation.quantity%><br>
 <%end%>

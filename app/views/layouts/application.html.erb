@@ -11,6 +11,7 @@
 
   <body>
    <%if current_user%>
+   <h1>Dear Creatures - An app for humans to give to animals in need</h1>
    <%=link_to "home", user_path(current_user)%>
    <%=link_to "logout", logout_path%>
     <%end%>
