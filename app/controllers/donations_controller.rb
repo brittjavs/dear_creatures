@@ -9,13 +9,14 @@ class DonationsController < ApplicationController
         
         @donation = current_user.donations.create(donation_params)
          if @donation
-            if params[:quantity]
-            NeededItem.update_quantity(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:quantity])
+            if params[:donation][:quantity].empty?
+                NeededItem.update_funds(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:dollar_amount])
             else
-            NeededItem.update_funds(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:dollar_amount])
+                NeededItem.update_quantity(params[:donation][:shelter_id], params[:donation][:item_id], params[:donation][:quantity])
             end
 
-             redirect_to shelter_path(@donation.shelter)
+
+            redirect_to shelter_path(@donation.shelter)
           else
               render :new
           end
