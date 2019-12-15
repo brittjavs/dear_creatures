@@ -23,8 +23,8 @@ class DonationsController < ApplicationController
     end
 
     def index
-        @user = current_user
-        @donations = current_user.donations.all
+        @money_donations = current_user.donations.money
+        @item_donations = current_user.donations.not_money
     end
 
     private
