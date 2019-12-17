@@ -1,5 +1,8 @@
 <h1>Donation Form</h1>
-
+<%if flash[:error]%>
+<%=flash[:error]%>
+<%end%>
+<br>
 <%=form_for @donation do |f|%>
 <%=f.label :shelter_id, "Select a Shelter/Rescue to Donate to"%><br>
 <%=f.collection_select :shelter_id, Shelter.all, :id, :name, :include_blank => true%><br>
