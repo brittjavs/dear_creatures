@@ -2,6 +2,9 @@
 <%if flash[:error]%>
 <%=flash[:error]%>
 <%end%>
+<%if flash[:warning]%>
+<%=flash[:warning]%>
+<%end%>
 <br>
 <%=form_for @donation do |f|%>
 <%=f.label :shelter_id, "Select a Shelter/Rescue to Donate to"%><br>
