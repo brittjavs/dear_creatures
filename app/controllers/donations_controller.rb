@@ -6,7 +6,6 @@ class DonationsController < ApplicationController
     end
 
     def create
-        
         @donation = current_user.donations.create(donation_params)
          if @donation
             if params[:donation][:quantity].empty? && params[:donation][:dollar_amount].empty?

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DearCreatures</title>
+    <title>Dear Creatures</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,7 +11,7 @@
 
   <body>
    <%if current_user%>
-   <h1>Dear Creatures - An app for humans to give to animals in need</h1>
+   <header>Dear Creatures - An app for humans to give to animals in need</header>
    <%=link_to "home", user_path(current_user)%>
    <%=link_to "logout", logout_path%>
     <%end%>
