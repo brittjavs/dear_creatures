@@ -2,7 +2,12 @@ class DonationsController < ApplicationController
     before_action :require_login
     
     def new
-        @donation = Donation.new
+        if params[:shelter_id]
+            @shelter = Shelter.find_by_id(params[:shelter_id])
+            @donation = @shelter.donations.new
+        else
+            @donation = Donation.new
+        end
     end
 
     def create
@@ -35,3 +40,4 @@ class DonationsController < ApplicationController
         params.require(:donation).permit(:shelter_id, :user_id, :item_id, :quantity, :dollar_amount)
     end
 end
+
