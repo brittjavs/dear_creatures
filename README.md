@@ -10,8 +10,8 @@ A user can:
 * Sumbit a donation of items or funds through a form
 * View their past donations 
 
-To run this application, in the terminal:
-
+## To run this application:
+In your terminal
 run ```git clone git@github.com:brittjavs/dear_creatures.git``` then ```cd dear_creatures```
 run ```bundle install```
 run ```rails db:migrate RAILS_ENV=development``` then ```rails db:seed```
