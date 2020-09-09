@@ -13,8 +13,11 @@ A user can:
 ## To run this application:
 In your terminal
 run ```git clone git@github.com:brittjavs/dear_creatures.git``` then ```cd dear_creatures```
+
 run ```bundle install```
-run ```rails db:migrate RAILS_ENV=development``` then ```rails db:seed```
+
+run ```rails db:migrate RAILS_ENV=development``` 
+then ```rails db:seed```
 
 To view in browser
 
