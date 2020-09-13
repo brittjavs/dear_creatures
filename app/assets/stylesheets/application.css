@@ -24,37 +24,12 @@ body{
   font-family: 'Rubik', sans-serif;
   color: black;
   font-size: 16px;
-  
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
 }
  
- header, nav, section {
-   display: block;
- }
- body {
-   line-height: 1;
- }
- ol, ul {
-   list-style: none;
- }
- li {
-     padding: 11px 15px;
-     border-bottom: 1px solid #ccc;
-   }
 
- 
- /*
-   ========================================
-   Custom styles
-   ========================================
- */
- 
- body {
-   background: url(/images/nature_background_vh.jpg) no-repeat center center fixed;
-   background-size: cover;
-   color: #888;
-   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
- }
- 
+
  /*
    ========================================
    Typography
