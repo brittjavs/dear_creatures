@@ -7,13 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   </head>
 
   <body>
    <%if current_user%>
-   <header>Dear Creatures - An app for humans to give to animals in need</header>
-   <%=link_to "home", user_path(current_user)%>
-   <%=link_to "logout", logout_path%>
+   <header>
+   <h1>Dear Creatures - <span>An app for humans to give to animals in need</span></h1>
+   <button><%=link_to "home", user_path(current_user)%></button>
+   <button><%=link_to "logout", logout_path%></button>
+   </header>
     <%end%>
     <%= yield %>
   </body>
