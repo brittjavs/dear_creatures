@@ -1,5 +1,13 @@
-<h1>Welcome to Dear Creatures</h1>
-<h3>Give to animals in need</h3>
-<%=link_to "Sign Up", signup_path%>
-<%=link_to "Log In", login_path%>
-<%=link_to "Log In with Google", '/auth/google_oauth2' %>
+<div class="welcome">
+    <div class="animal-icons">
+    </div>
+    <div class="welcome-text">
+        <h1>Welcome to Dear Creatures</h1>
+        <h3>Give to animals in need</h3>
+    </div>
+    <div class="auth-links">
+        <button><%=link_to "Sign Up", signup_path%></button>
+        <button><%=link_to "Log In", login_path%></button>
+        <button><%=link_to "Log In with Google", '/auth/google_oauth2' %></button>
+    </div>
+</div>

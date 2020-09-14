@@ -10,13 +10,18 @@
   </head>
 
   <body>
-   <%if current_user%>
-   <header>
-   <h1>Dear Creatures - <span>An app for humans to give to animals in need</span></h1>
-   <button><%=link_to "home", user_path(current_user)%></button>
-   <button><%=link_to "logout", logout_path%></button>
-   </header>
-    <%end%>
-    <%= yield %>
+      <%if current_user%>
+      <header>
+        <h1>Dear Creatures</h1>
+        <strong>An app for humans to give to animals in need</strong>
+        <div class="nav-btns">
+          <button><%=link_to "home", user_path(current_user)%></button>
+          <button><%=link_to "logout", logout_path%></button>
+        </div>
+      </header>
+      <%end%>
+      <main>
+        <%= yield %>
+      </main>
   </body>
 </html>
