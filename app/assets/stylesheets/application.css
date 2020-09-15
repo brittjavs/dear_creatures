@@ -14,6 +14,7 @@
  *= require_self
  */
  
+<<<<<<< HEAD
  *{
   padding: 0;
   margin: 0;
@@ -28,6 +29,33 @@ body{
   font-size: 16px;
   background: url('../images/dots_pattern.png')
 }
+=======
+ html, body, div,h1, h2, h3, h4, h5, h6, p, blockquote, 
+ a, em, img, small, strong, ol, ul, li,
+ form, header, nav, ruby, section{
+   margin: 10;
+   padding: 5;
+   border: 5;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ 
+ header, nav, section {
+   display: block;
+ }
+ body {
+   line-height: 1;
+ }
+ ol, ul {
+   list-style: none;
+ }
+ li {
+     padding: 11px 15px;
+     border-bottom: 1px solid #ccc;
+   }
+>>>>>>> parent of 0a8b02b... added font link in application.html. Added * and body styling in application.css. wrapped app name and nav in header tags
 
 main{
   width: 80%;
