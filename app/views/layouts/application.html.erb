@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<<<<<<< HEAD
+     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   </head>
 
@@ -24,17 +24,6 @@
       <main>
         <%= yield %>
       </main>
-=======
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-   <%if current_user%>
-   <header>Dear Creatures - An app for humans to give to animals in need</header>
-   <%=link_to "home", user_path(current_user)%>
-   <%=link_to "logout", logout_path%>
-    <%end%>
-    <%= yield %>
->>>>>>> parent of 0a8b02b... added font link in application.html. Added * and body styling in application.css. wrapped app name and nav in header tags
   </body>
+ 
 </html>
