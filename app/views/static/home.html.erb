@@ -9,8 +9,8 @@
         <h3>Give to animals in need</h3>
     </div>
     <div class="auth-btns">
-        <button><%=link_to "Sign Up", signup_path%></button>
-        <button><%=link_to "Log In", login_path%></button>
-        <button><%=link_to "Log In with Google", '/auth/google_oauth2' %></button>
+        <%=link_to "Sign Up", signup_path, class: "button"%>
+        <%=link_to "Log In", login_path, class: "button"%>
+        <%=link_to "Log In with Google", '/auth/google_oauth2', class: "button"%>
     </div>
 </div>
