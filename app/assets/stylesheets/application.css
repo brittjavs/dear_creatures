@@ -27,7 +27,7 @@ body{
   color: #00BDA4;
   font-size: 16px;
   font-weight: 400;
-  background-image: url("../images/dots_pattern.png");
+  background-image: url("dots_pattern.png");
 }
 
 main{
@@ -38,16 +38,21 @@ main{
 }
 
 h1{
-  font-size: 54px;
+  font-size: 56px;
   font-weight: 800;
 }
 
-h3{
-  font-size: 32px;
+h2{
+  font-size: 42px;
   font-weight: 600;
 }
 
-.welcome-container{
+h3{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.container{
   width: 90%;
   position: absolute;
   top: 50%;
@@ -70,6 +75,31 @@ h3{
   border: none;
   padding: 25px;
   color: white;
+  text-decoration: none;
+}
+
+.form{
+  background-color: #00BDA4;
+  color: white;
+  width: 50%;
+  padding: 50px 0 50px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+input{
+  width: 30%;
+  height:30px;
+  margin-top: 25px;
+}
+
+.form .button{
+  background-color: white;
+  outline: none;
+  border: none;
+  color: #00BDA4;
   text-decoration: none;
 }
 

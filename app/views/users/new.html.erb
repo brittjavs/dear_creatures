@@ -1,25 +1,31 @@
-<h1>Create an Account</h1>
-<% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2>There were some errors:</h2>
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="container">
+  <div class="form">
+    <h1>Create an Account</h1>
+    <div class="error">
+      <% if @user.errors.any? %>
+        <h2>There were some errors:</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
-  <% end %>
-<%=form_for @user do |f|%>
-
-<%=f.label :email%>
-<%=f.email_field :email%>
-<br>
-<%=f.label :username%>
-<%=f.text_field :username%>
-<br>
-<%=f.label :password%>
-<%=f.password_field :password%>
-<br>
-
-<%=f.submit "Sign up"%>
-<%end%>
+ 
+    <%=form_for @user do |f|%>
+    <div class="input">
+      <%=f.label :email%>
+      <%=f.email_field :email%>
+    </div>
+    <div class="input">
+      <%=f.label :username%>
+      <%=f.text_field :username%>
+    </div>
+    <div class="input">
+      <%=f.label :password%>
+      <%=f.password_field :password%>
+    </div>
+    <%=f.submit "Sign up", class: "button"%>
+    <%end%>
+  </div>
+</div>
