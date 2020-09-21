@@ -52,6 +52,10 @@ h3{
   font-weight: 600;
 }
 
+h4{
+  font-size: 24px;
+}
+
 .container{
   width: 90%;
   position: absolute;
@@ -101,6 +105,26 @@ input{
   border: none;
   color: #00BDA4;
   text-decoration: none;
+}
+.page{
+  margin: 0 auto;
+  width: 90%;
+  position: absolute;
+  text-align: center;
+}
+
+.img-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.img-link img{
+  margin: 20px;
+  width: 200px;
+  padding: 20px;
+  background-color: teal;
 }
 
 

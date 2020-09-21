@@ -1,7 +1,17 @@
-<h2>Hello, <%=@user.username%></h2>
-
-<%=link_to "View your past donations", user_donations_path(@user)%><br>
-<br>
-<%=link_to "Browse Shelters", shelters_path%><br>
-<br>
-<%=link_to "Make a Donation", new_user_donation_path(@user)%><br>
+<div class="page">
+    <h2>Hello, <%=@user.username%></h2>
+    <div class="img-links">
+        <div class="img-link">
+            <h4>Past Donations</h4>
+            <%=link_to image_tag("/../../assets/noun_donation_689837.png", :alt => "giving-hand", :title => "Donation"), user_donations_path(@user)%>
+        </div>
+        <div class="img-link">
+            <h4>Browse Shelters</h4>
+            <%=link_to image_tag("/../../assets/noun_Shelter_2334846.png", :alt => "shelter"), shelters_path%>
+        </div>
+        <div class="img-link">
+            <h4>Make a Donation</h4>
+            <%=link_to image_tag("/../../assets/noun_donation_1148967.png", :alt => "donation-jar"), new_user_donation_path(@user)%>
+        </div>
+    </div>
+</div>
