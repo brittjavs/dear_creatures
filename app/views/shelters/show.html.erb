@@ -1,8 +1,7 @@
-<%# #name, location, description and list of items and quantities needed with link to make a donation at the bottom %>
-<h1><%=@shelter.name%></h1>
+<h2><%=@shelter.name%></h2>
 Located in <%=@shelter.location%>
-<p>If you are not able to volunteer in person, please consider donating an item from the Wish List. Thank you!</p>
-<h2>Needed Items</h2>
+<p>Please consider donating an item from the Wish List. Thank you!</p>
+<h3>Needed Items</h3>
 <table>
     <thead>
         <tr>
@@ -24,7 +23,7 @@ Located in <%=@shelter.location%>
     </tbody>
 </table>
 
-<%=link_to "Make a donation", new_user_donation_path(current_user)%>
+<button><%=link_to "Make a donation", new_user_donation_path(current_user)%></button>
 
-<h3>Many thanks to all donors who have already contributed to the well-being of the animals in our care!</h3>
+<h4>Many thanks to all donors who have already contributed to the well-being of the animals in our care!</h4>
 

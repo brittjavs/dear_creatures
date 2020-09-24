@@ -45,6 +45,10 @@ h1{
 h2{
   font-size: 42px;
   font-weight: 600;
+  padding: 15px;
+  background-color: #00BDA4;
+  color: white;
+  border-radius: 30px;
 }
 
 h3{
@@ -107,7 +111,8 @@ input{
   text-decoration: none;
 }
 .page{
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-top: 50px;
   width: 90%;
   position: absolute;
   text-align: center;
@@ -117,6 +122,7 @@ input{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-content: center;
   margin-top: 75px;
 }
 
@@ -125,6 +131,24 @@ input{
   width: 200px;
   padding: 20px;
   background-color: teal;
+}
+
+ul{
+  margin: 50px;
+  background-color: white;
+}
+
+li{
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #00BDA4;
+}
+
+a:hover{
+  color: blue;
 }
 
 
