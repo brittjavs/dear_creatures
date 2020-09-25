@@ -1,5 +1,6 @@
 <div class="page">
     <h2>Animal Shelters, Rescues, and Sanctuaries</h2>
+
         <ul>
         <%@shelters.each do |shelter|%>
         <li>
@@ -8,7 +9,7 @@
         <br>
         <%=shelter.description%>
         <br>
-        <%=link_to "Make Donation", new_shelter_donation_path(shelter)%>
+        <strong><%=link_to "Make Donation", new_shelter_donation_path(shelter)%></strong>
         </li>
         <%end%>
         </ul>

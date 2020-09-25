@@ -16,8 +16,8 @@
         <h1>Dear Creatures</h1>
         <strong>An app for humans to give to animals in need</strong>
         <div class="nav-btns">
-          <button><%=link_to "home", user_path(current_user)%></button>
-          <button><%=link_to "logout", logout_path%></button>
+          <%=link_to "home", user_path(current_user), class: "button"%>
+          <%=link_to "logout", logout_path, class: "button"%>
         </div>
       </header>
       <%end%>
