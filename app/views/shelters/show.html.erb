@@ -1,29 +1,31 @@
-<h2><%=@shelter.name%></h2>
-Located in <%=@shelter.location%>
-<p>Please consider donating an item from the Wish List. Thank you!</p>
-<h3>Needed Items</h3>
-<table class="teal-rows">
-    <thead>
-        <tr>
-            <th>Quantity</th>
-            <th> Item</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-         <%@shelter.needed_items.each do |needed_item|%>
-            <%if needed_item.quantity != nil%>
-            <td><%=needed_item.quantity%></td>
-            <%else%>
-            <td>$<%=needed_item.dollar_amount%></td>
-            <%end%>
-            <td><%=needed_item.item.name%></td>
-        </tr>
-         <%end%>
-    </tbody>
-</table>
-
-<button><%=link_to "Make a donation", new_user_donation_path(current_user)%></button>
-
-<h4>We appreciate all contributions made toward the well-being of the animals in our care!</h4>
-
+<div class="page">
+    <h2><%=@shelter.name%></h2>
+    Located in <%=@shelter.location%>
+    <p>Please consider donating an item from the Wish List. Thank you!</p>
+    
+    <div class="table-container">
+        <h3>Needed Items</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th> Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <%@shelter.needed_items.each do |needed_item|%>
+                    <%if needed_item.quantity != nil%>
+                    <td><%=needed_item.quantity%></td>
+                    <%else%>
+                    <td>$<%=needed_item.dollar_amount%></td>
+                    <%end%>
+                    <td><%=needed_item.item.name%></td>
+                </tr>
+                <%end%>
+            </tbody>
+        </table>
+    </div>
+        <%=link_to "Make a donation", new_user_donation_path(current_user), class: "button"%>
+    <h4>We appreciate all contributions made toward the well-being of the animals in our care!</h4>
+</div>

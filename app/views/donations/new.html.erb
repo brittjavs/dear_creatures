@@ -4,6 +4,7 @@
         <%if flash[:error]%>
         <%=flash[:error]%>
         <%end%>
+        
         <%if flash[:warning]%>
         <%=flash[:warning]%>
         <%end%>
@@ -20,7 +21,7 @@
         <%=f.label :dollar_amount%>
         <%=f.number_field :dollar_amount, step: "any", min: 1%>
         <br>
-        <%=f.submit "Submit Donation"%>
+        <%=f.submit "Submit Donation", class: "button"%>
         <%end%>
     </div>
 </div>
