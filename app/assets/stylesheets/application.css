@@ -32,13 +32,16 @@ body{
 header{
   margin: 10px;
   text-align: center;
+  background-color: #00BDA4;
+  color: white;
+  padding: 20px;
 }
 
 main{
   width: 95%;
   height: 100%;
-  position: relative;
-  margin: 0 auto;
+  /* position: relative; */
+  margin: 0 auto; 
 }
 
 h1{
@@ -50,7 +53,7 @@ h2{
   font-size: 42px;
   font-weight: 600;
   padding: 15px;
-  background-color: #00BDA4;
+  background-color: #FFAD94;
   color: white;
   border-radius: 20px;
 }
@@ -65,15 +68,17 @@ h4{
 }
 
 .container{
-  margin: 0;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-right: -50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%
 }
 
+.weclome{
+  margin: 0;
+}
 .animal-icons{
   margin-bottom: 40px;
 }
@@ -89,28 +94,25 @@ h4{
   padding: 25px;
   color: white;
   text-decoration: none;
+  margin-bottom: 25px;
 }
+
 .nav-btns{
   margin-top: 30px;
-  margin-bottom: 50px;
-
+  margin-bottom: 10px;
 }
-.nav-btns .button{
-  background-color: #00BDA4;
-  outline: none;
-  border: none;
-  padding: 10px;
+
+.nav-btns a{
   color: white;
-  text-decoration: none;
+  padding: 30px;
+  font-weight: 800;
 }
 
 .form{
   max-width: 700px;
-	padding: 10px 20px;
-	background: #f4f7f8;
-	margin: 10px auto;
 	padding: 20px;
-	background: #f4f7f8;
+	background: #e8f4f7;
+	margin: 10px auto;
 	border-radius: 8px;
 }
 
@@ -121,8 +123,8 @@ label{
   font-weight: 600;
 }
 
-input{
-  width: 30%;
+input, select{
+  width: 40%;
   height:30px;
   margin-top: 10px;
 }
@@ -146,7 +148,7 @@ input{
   margin: 20px;
   width: 200px;
   padding: 20px;
-  background-color: teal;
+  background-color: #00BDA4;
 }
 
 ul{

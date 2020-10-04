@@ -14,10 +14,10 @@
       <%if current_user%>
       <header>
         <h1>Dear Creatures</h1>
-        <strong>An app for humans to give to animals in need</strong>
+        An app for humans to give to animals in need
         <div class="nav-btns">
-          <%=link_to "home", user_path(current_user), class: "button"%>
-          <%=link_to "logout", logout_path, class: "button"%>
+          <%=link_to "HOME", user_path(current_user)%>
+          <%=link_to "LOGOUT", logout_path%>
         </div>
       </header>
       <%end%>
